@@ -1,0 +1,34 @@
+# Introduction
+
+<h3> Genome anotatie ab de novo. Introductie</h3> 
+
+Relevantie van het onderzoeksonderwerp 
+
+
+The significance of this research topic is crucial because, in experimental science and medicine, there is currently a push for alternatives to animal use in various laboratory experiments. Given the important role that different species of worms play as models in medical and biological research, studying their genetic material is essential. This project specifically focuses on analyzing the genetic material of the Lumbricidae family [@LumbriBASE]. The species Lumbricus terrestris belongs to the phylogenetic family Annelida, Clitellata, Oligochaeta, Crassiclitellata, Lumbricina, Lumbricidae [@erxlebenGenomeAnnotation0000]. Earthworms (Annelida) represent one of the oldest evolutionary groups, and their muscle structure closely resembles the striated muscle found in animals[@giovannipilatoSignificanceMusculatureOrigin]. Therefore, this species serves as a relevant model for laboratory research involving humans.
+
+
+Genome annotation is the process focused on identifying functional components within a DNA sequence. This annotation process provides insights into the genome by specifying the location and function of genes, including those that code for proteins or perform other roles, along with their regulatory elements. The assembly is always based on the reads generated during the sequencing process. Genome assembly involves reconstructing the original genome from small pieces of DNA obtained through sequencing[@colauttillabNovoAssemblyTutorial]. These reads typically ensure that the original genome is covered multiple times. When analyzing genomic and metagenomic data, the usual solution is a collection of contigs. A contig is a continuous nucleotide sequence. These contigs can be combined into scaffolds, which consist of a series of contigs with estimated distances between these sequences[@ncbi.nlm.nih.govNCBIEukaryoticGenome].The processes of genome assembly and annotation are integrated into a larger framework that aims to identify the genome. Annotating a genome is still a time-consuming process that brings together various types of sequence analyses. Given the size and complexity of genomes, the first step toward complete genome assembly is usually obtaining sequencing data to achieve a rough assembly and prediction of gene models.
+
+
+2. Generally, the annotation process consists of several key steps: 
+1) First, highly repetitive elements in the genome sequence are masked. 
+2) Next, transcripts and proteins from the same or closely related species are used to predict gene structures from scratch. These known transcripts and proteins can be found in genetic databases like NCBI and BLAST. 
+3) Then, gene-finding algorithms are applied to identify possible gene structures. 
+4) After that, the data is combined to form an initial set of gene models. 
+5) Finally, the results are filtered for quality to identify the most likely gene models that represent complete protein-coding regions[@ncbi.nlm.nih.govNCBIEukaryoticGenome]. Initially, quality selection is performed using a set of positive controls for the program, and after these checks, the rate of false positives becomes apparent.
+
+
+ An overview of publicly accessible genomes and annotations for Lumbricus terrestris. There are only a few studies in the current literature that discuss the assembly and annotation of the Lumbricus terrestris genome, but there are many examples of genome annotations for other species. For example, C. elegans and Lubricus rubellus have complete annotations available. For the first time, a detailed genome assembly of Lumbricus terrestris genes was released on October 30 [@blaxterGenomeSequenceCommon2023]. Researchers utilized advanced long-read sequencing techniques from Pacific Biosciences to sequence and publish the genome. While the genome is complete at the sequence level, the annotation analysis remains quite scattered. This is the first genome assembly made available to the public. The project focuses on further exploring the metadata related to genome assemblies. Up to now, there have been no thorough and systematic studies on the annotation of the Lumbricus terrestris genome in the literature.
+
+
+
+<div class="pd22">
+
+<h4> Bibliography  </h4>
+
+<div id="refs"></div>
+
+</div>
+
+

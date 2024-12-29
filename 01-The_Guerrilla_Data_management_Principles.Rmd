@@ -1,0 +1,48 @@
+# The Guerrilla Data_management Principles 
+
+##  Portfolio assignment 1.2 Part 1
+
+<div class="azure">
+<h4> Looking ahead</h4>
+<h3>  Answer the following questions:  </h3>
+
+<li>  Where do I want to be in ~2 years time? </li>
+<li>  How am I doing now with respect to this goal?  </li>
+<li>  What would be the next skill to learn? </li>
+
+</div>
+
+
+<h3> Plan  to get a paid job in the Netherlands </h3>
+
+To do this I need to take the following steps: 
+<p> master the Dutch language, get a basic education. </p>
+<p>In my final year of education I plan to do an internship at inspection company NAK ( Randweg 14,Emmeloord). Presumably I will be doing work on detecting infection in potato seeds, using qPCR and data analyse of results. </p>
+
+<p>The current course TLSC-DSFB26V-20 is aimed at obtaining basic bio-medical and bioinformatics knowledge, which I need for your work position. <p>
+</div>
+
+<h3> What would be the next skill to learn </h3>
+
+<li> -Genomic Data Visualization and Interpretation (Ensemble, UCSC, IGV) </li>
+<li> -Visualize mutation profile patterns (GenVisR) </li>
+<li> -Visualize the genomic characterization of disease and response to therapy results (GenVisR) </li>
+<li> -Matplotlib & Seaborn PyData  </li>
+
+
+<div class="azure pd22"> Make a planning on how to start learning this new skill.
+
+Note the following points:
+
+    It has to be life sciences or useful for life sciences (no knitting, riding horses etc)
+    It has to be data science / bioinformatics
+    You have to show your plan in your portfolio, together with the result of the first few steps you took in trying to reach this goal.
+    You probably won’t learn this skill in a few days. Just get started.
+
+This assignment will show us whether you succeeded in reaching an overview of the field and possibilities in data science for biology</div>
+
+
+
+## Planing for portfolio assignment 1.2 Looking ahead. Package GenVisR
+
+GenVisR was developed in a separate chapter 

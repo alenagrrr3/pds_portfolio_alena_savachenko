@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Reproducibility issues in a scientific publication. | Data science for biology</title>
+  <meta name="description" content="Chapter 6 Reproducibility issues in a scientific publication. | Data science for biology" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Reproducibility issues in a scientific publication. | Data science for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Reproducibility issues in a scientific publication. | Data science for biology" />
+  
+  
+  
+
+<meta name="author" content="alena savachenko" />
+
+
+<meta name="date" content="2024-12-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="reproducible-research.html"/>
+<link rel="next" href="reproducble-research.-part-2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="assets/img/logo_toc.png"></a></li>
+<li><a href="./">Data science for biology </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="the-guerrilla-data_management-principles.html"><a href="the-guerrilla-data_management-principles.html"><i class="fa fa-check"></i><b>2</b> The Guerrilla Data_management Principles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-guerrilla-data_management-principles.html"><a href="the-guerrilla-data_management-principles.html#portfolio-assignment-1.2-part-1"><i class="fa fa-check"></i><b>2.1</b> Portfolio assignment 1.2 Part 1</a></li>
+<li class="chapter" data-level="2.2" data-path="the-guerrilla-data_management-principles.html"><a href="the-guerrilla-data_management-principles.html#planing-for-portfolio-assignment-1.2-looking-ahead.-package-genvisr"><i class="fa fa-check"></i><b>2.2</b> Planing for portfolio assignment 1.2 Looking ahead. Package GenVisR</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="agile-collaboration.html"><a href="agile-collaboration.html"><i class="fa fa-check"></i><b>3</b> Agile collaboration</a></li>
+<li class="chapter" data-level="4" data-path="data-managment-principles.html"><a href="data-managment-principles.html"><i class="fa fa-check"></i><b>4</b> Data managment principles</a></li>
+<li class="chapter" data-level="5" data-path="reproducible-research.html"><a href="reproducible-research.html"><i class="fa fa-check"></i><b>5</b> Reproducible research</a></li>
+<li class="chapter" data-level="6" data-path="reproducibility-issues-in-a-scientific-publication..html"><a href="reproducibility-issues-in-a-scientific-publication..html"><i class="fa fa-check"></i><b>6</b> Reproducibility issues in a scientific publication.</a></li>
+<li class="chapter" data-level="7" data-path="reproducble-research.-part-2.html"><a href="reproducble-research.-part-2.html"><i class="fa fa-check"></i><b>7</b> Reproducble research. Part 2</a></li>
+<li class="chapter" data-level="8" data-path="working-with-relational-databases.html"><a href="working-with-relational-databases.html"><i class="fa fa-check"></i><b>8</b> Working with relational databases</a></li>
+<li class="chapter" data-level="9" data-path="creating-r-packages.html"><a href="creating-r-packages.html"><i class="fa fa-check"></i><b>9</b> Creating R packages</a></li>
+<li class="chapter" data-level="10" data-path="genvisr.html"><a href="genvisr.html"><i class="fa fa-check"></i><b>10</b> GenVisR</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="genvisr.html"><a href="genvisr.html#introduction-to-dataset"><i class="fa fa-check"></i><b>10.1</b> Introduction to dataset</a></li>
+<li class="chapter" data-level="10.2" data-path="genvisr.html"><a href="genvisr.html#implementation-genvizr"><i class="fa fa-check"></i><b>10.2</b> Implementation genVizR</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="parameterized-rmarkdown.html"><a href="parameterized-rmarkdown.html"><i class="fa fa-check"></i><b>11</b> parameterized RMarkdown</a></li>
+<li class="chapter" data-level="12" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>12</b> Introduction</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/alenagrrr3/portfolio_alena_savachenko" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data science for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducibility-issues-in-a-scientific-publication." class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Reproducibility issues in a scientific publication.<a href="reproducibility-issues-in-a-scientific-publication..html#reproducibility-issues-in-a-scientific-publication." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h3>
+Open Peer Review scientific publication.Part1
+</h3>
+<div class="azure">
+<p>
+<p>PART 1 To complete part 1, execute activity A to G</p>
+Initiate an empty RMarkdown file in your RStudio environment and provide author and title (after the title of this exercise)
+Search for a primary Open Access article on one of the above listed topics, using Pubmed Central
+Read the article diagonally (“blader het even door”) to check if is indeed a primary article describing emperical scientific findings.
+Include the reference to this article in your Rmd file
+Score the article on the basis of the above ‘Repita’ criteria
+Write an Rmarkdown report on your findings, including the table above and some information about the article such as general aim, short methods and results. If data is available, try including some
+Store the source Rmd and knitted HTML in a folder called ‘Rmd’ in your course RStudio project. You will need it again later in the course
+</p>
+</div>
+<p><a href="%22https://pubmed.ncbi.nlm.nih.gov/38723404/">Reference to this article: https://pubmed.ncbi.nlm.nih.gov/38723404:</a></p>
+<h3>
+General informtaion :
+</h3>
+<p>
+<strong> Title: </strong> Altered coordination between sleep timing and cortisol profiles in night working female hospital employees
+</p>
+<p>
+<strong> Authors: </strong> Katarzyna Burek, Sylvia Rabstein, Thomas Kantermann, Céline Vetter
+</p>
+<h3>
+Criteria for reproduciblity scores :
+</h3>
+<p>
+<strong> Study Purpose: </strong> The purpose of this study is to measure the cortisol response in shift workers who work night shifts and to compare the cortisol level with non-shift workers.
+</p>
+<p>
+Binary : Yes
+</p>
+<strong> Data Availability Statement: </strong>
+<p>
+only part of data is available
+</p>
+<p>
+Binary : No
+</p>
+<strong> Data Location: </strong>
+<p>
+Found value: the part of processed data is present in the article as a part of table or graphs. There is no separately data-set available.
+</p>
+<strong> Study Location </strong>
+<p>
+Hospital Bergmannsheil Bochum, Germany
+</p>
+<p>
+Binary : Yes
+</p>
+<p>
+Found location : Hospital Bergmannsheil Bochum, Germany
+</p>
+<strong> Author Review, Electronic address: </strong>
+<p>
+Institute for Prevention and Occupational Medicine of the German Social Accident Insurance (IPA), Institute of the Ruhr-Universität Bochum, Bochum, Germany, Electronic address: <a href="mailto:katarzyna.burek@dguv.de" class="email">katarzyna.burek@dguv.de</a>.
+</p>
+<p>
+Found Value : Electronic address: <a href="mailto:katarzyna.burek@dguv.de" class="email">katarzyna.burek@dguv.de</a>
+</p>
+<strong> Ethics Statement : </strong>
+<p>
+data such as names and addresses of participants will not be published
+</p>
+<p>
+Binary : Yes
+</p>
+<strong> Funding Statement:</strong>
+<p>
+Our findings indicate altered cortisol profiles in female hospital employees on night shifts. Specifically, cortisol levels were lower at night when higher levels would typically be necessary for work activities, and higher at bedtime after a night shift, when levels should normally be low.
+</p>
+<p>
+Binary : Yes
+</p>
+<strong> Code Availability: </strong>
+<p>
+the code is not shared, but the visualization of code is included in the
+article
+</p>
+<p>
+Binary : No
+</p>
+<h3>
+General aim, short methods and results
+</h3>
+<p>
+Study of cortisol levels in different groups exposed to different experimental conditions,
+including day work, shift-work and night work. The main goal of this research is
+how does night work affect cortisol levels, is there a significant difference between regular workers and night shift workers. Salivary cortisol was measured 6 times a day in groups of non shift workers and night shift workers. For each collected saliva sample, the difference between sampling time and both times of waking up was calculated.Log transformed cortisol levels was put in linear model against the time with smooth functions as part of the linear predictor
+estimated smooth curves of cortisol for each level of the predictor (day shift, night shift) were estimated with smooth curves, and then the non-linear difference between cortisol curves over time was computed. Smooth curves and their difference is visualized. In the night shift group, there was a sharp increase in cortisol towards the end of the working day. The conclusion
+is, that In general, night shift workers had higher cortisol levels than day shift workers
+</p>
+<div class="pd22">
+<div class="float">
+<img src="assets/img/cortisol.png" alt="cortisol image" />
+<div class="figcaption">cortisol image</div>
+</div>
+<p class="sm_img">
+Figuur 1 Cortisol smooth curves by shift and study day, as well as the differences between study days. Individual salivary cortisol levels (points) and estimated cortisol smooth curves (with 95% simultaneous CI) across time since waking up plotted by study group and study day for (A) non-shift workers on day shifts, (B) shift workers on day shifts, and (C) shift workers on night shifts. Estimated difference and 95% simultaneous CI between study days in (D) non-shift workers on day shifts, (E) shift workers on day shifts, (F) in shift workers on night shifts. The random effects were set to zero. In panels D, E and F, the grey area represents durations of no difference (CI for the estimated difference include zero) between the curves (study day 2 compared to study day 1)
+</p>
+</div>
+
+</div>
+<div id="footer">Copyright &copy;  Hogeschool Utrecht   DSFB2  <i class="fa-solid fa-webhook"></i> 2024  		</footer>
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="reproducible-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducble-research.-part-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
