@@ -86,6 +86,11 @@ dscurve::dosisresponse(df,components)
 
 <div class="pd22" > </div>
 
+```{r}
+dscurve::basestats(df)
+```
+
+
 <div class="pd22" > </div>
 
 

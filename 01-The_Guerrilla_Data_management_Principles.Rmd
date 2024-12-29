@@ -45,4 +45,4 @@ This assignment will show us whether you succeeded in reaching an overview of th
 
 ## Planing for portfolio assignment 1.2 Looking ahead. Package GenVisR
 
-GenVisR was developed in a separate chapter 
+GenVisR was developed in a separate chapter, see chapter 10
