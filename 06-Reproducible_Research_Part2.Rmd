@@ -15,7 +15,6 @@ Choose one of the papers used in this study. Or, using the OSF website, search f
 </div>
 
 
-
 <h3> Gereral information </h3>
 
 <p> Title : <strong>  Interventions to improve oral vaccine performance in developing countries: a systematic review and meta-analysis </strong> </p>
@@ -27,6 +26,7 @@ is to visualize increase in diseases, dosis vaccination in countries. The purpos
 
 <p> Source: https://osf.io/bemw6/</p>
 
+score for reproducibility is very high : 4.99
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=3.5, fig.width=9}
 d = read.csv("data/les4/csv/Church_et_al_2018_summary.csv", stringsAsFactors = FALSE)
